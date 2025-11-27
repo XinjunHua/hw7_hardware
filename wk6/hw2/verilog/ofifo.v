@@ -31,7 +31,7 @@ module ofifo (clk, in, out, rd, wr, o_full, reset, o_ready, o_valid);
 	 .wr_clk(clk),
 	 .rd(rd_en),
 	 .wr(wr[i]),
-    .o_empty(empty[i])),
+    .o_empty(empty[i]),
     .o_full(full[i]),
 	 .in(in[bw*i +: bw]),
 	 .out(out[bw*i +: bw]),
