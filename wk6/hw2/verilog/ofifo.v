@@ -10,7 +10,7 @@ module ofifo (clk, in, out, rd, wr, o_full, reset, o_ready, o_valid);
   input  rd;
   input  reset;
   input  [bw*col-1:0] in;
-  output [bw*col=1:0] out;
+  output [bw*col-1:0] out;
   output o_full;
   output o_ready;
   output o_valid;
@@ -35,7 +35,7 @@ module ofifo (clk, in, out, rd, wr, o_full, reset, o_ready, o_valid);
          .o_full(full[i]),
 	 .in(in[bw*i +: bw]),
 	 .out(out[bw*i +: bw]),
-         .reset(reset));
+         .reset(reset);
   end
 
 
